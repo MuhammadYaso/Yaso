@@ -5,7 +5,7 @@ with open('Top 250 Movies - IMDb.html') as file:
     soup = BeautifulSoup(file)
 
 df_list = list()
-for i in range(0,3):
+for i in range(0,250):
     rank = soup.find_all('td',class_="titleColumn")[i].contents[0].strip()[0]
     title = soup.find_all('td',class_='titleColumn')[i].contents[1].contents[0]
     rating = soup.find_all('td',class_='ratingColumn imdbRating')[i].contents[1].contents[0]
